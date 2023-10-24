@@ -1,0 +1,16 @@
+python run_clm.py \
+--model_name_or_path='beomi/KoAlpaca-Polyglot-5.8B' \
+--train_file='./data/감성대화말뭉치.csv' \
+--num_train_epochs=1 \
+--block_size=1024 \
+--per_device_train_batch_size=4 \
+--gradient_accumulation_steps=8 \
+--fp16 \
+--output_dir='../../../../hdd/hkyoon95/polyglot-5.8b-koalpaca-emotion_2e-5' \
+--do_train \
+--optim='adafactor' \
+--learning_rate='2e-5' \
+--logging_strategy='steps' \
+--logging_first_step \
+--run_name='hdd/hkyoon95/polyglot-5.8b-koalpaca-emotion_2e-5' \
+--low_cpu_mem_usage
